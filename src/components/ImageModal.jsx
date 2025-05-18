@@ -23,15 +23,17 @@ export default function ImageModal({ selectedImage, modalIsOpen, closeModal }) {
                     alt={selectedImage.alt_description}
                 />
             </a>
-            <p className={`${css.ImageInfo} ${css.InfoResolution}`}>
-                {selectedImage.width}×{selectedImage.height}
-            </p>
-            <p className={css.ImageInfo}>
-                <strong>Likes:</strong> {selectedImage.likes}
-            </p>
-            <p className={css.ImageInfo}>
-                <strong>Uploaded by:</strong> {selectedImage.user.username}
-            </p>
+            <div className={css.TextContainer}>
+                <p className={`${css.ImageInfo} ${css.InfoResolution}`}>
+                    {selectedImage.width}×{selectedImage.height}
+                </p>
+                <p className={css.ImageInfo}>
+                    <strong>Likes:</strong> {selectedImage.likes}
+                </p>
+                <p className={css.ImageInfo}>
+                    <strong>Uploaded by:</strong> {selectedImage.user.username}
+                </p>
+            </div>
         </Modal>
     );
 }
