@@ -24,9 +24,6 @@ export default function ImageModal({ selectedImage, modalIsOpen, closeModal }) {
                 />
             </a>
             <div className={css.TextContainer}>
-                <p className={`${css.ImageInfo} ${css.InfoResolution}`}>
-                    {selectedImage.width}×{selectedImage.height}
-                </p>
                 <p className={css.ImageInfo}>
                     <strong>Likes:</strong> {selectedImage.likes}
                 </p>
